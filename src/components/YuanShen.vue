@@ -316,7 +316,7 @@ export default {
   <el-card class="box-card">
     <template #header>
       <div class="card-header">
-        <span>请输入链接地址new</span>
+        <span>请输入链接地址lalal</span>
         <div>
           <el-button type="primary" @click="getList($event, 1)">显示列表数据</el-button>
           <el-button type="success" @click="analyse($event, 1)">查询统计结果</el-button>

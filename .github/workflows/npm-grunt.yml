@@ -34,5 +34,5 @@ jobs:
           # target: "/usr/local/nginx/html/yuanshen"
           # strip_components: 0
           # recursive: true
-         local: './dist/*' # 这里是下一步要创建的vue项目构建完成后的静态资源路径
-         remote: /usr/local/nginx/html/yuanshen # 这里是 step1 中，在服务器上创建用于存放静态资源的文件夹
+          local: './dist/*' # 这里是下一步要创建的vue项目构建完成后的静态资源路径
+          remote: /usr/local/nginx/html/yuanshen # 这里是 step1 中，在服务器上创建用于存放静态资源的文件夹

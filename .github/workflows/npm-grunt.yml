@@ -15,7 +15,7 @@ jobs:
 
       - name: Build
         run: |
-          cd yuanshenSearch # 进入项目目录
+          cd ../../yuanshenSearch # 进入项目目录
           npm install  # 安装依赖
           npm run build  # 执行打包
   

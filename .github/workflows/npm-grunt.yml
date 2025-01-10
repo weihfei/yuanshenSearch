@@ -25,9 +25,14 @@ jobs:
           WELCOME: "ssh scp ssh pipelines"
           LASTSSH: "Doing something after copying"
         with:
-         host: ${{ secrets.DR_HOST }}
-         user: ${{ secrets.DR_USER }}
-         pass: ${{ secrets.DR_PASS }}
-         connect_timeout: 10s
-         local: './yuanshenSearch/dist/*' # 这里是下一步要创建的vue项目构建完成后的静态资源路径
-         remote: /usr/local/nginx/html/yuanshen # 这里是 step1 中，在服务器上创建用于存放静态资源的文件夹
+          host: ${{ secrets.DR_HOST }}
+          user: ${{ secrets.DR_USER }}
+          pass: ${{ secrets.DR_PASS }}
+          connect_timeout: 10s
+          port: 22
+          source: "dist/*"
+          target: "/usr/local/nginx/html/yuanshen"
+          strip_components: 0
+          recursive: true
+        #  local: './yuanshenSearch/dist/*' # 这里是下一步要创建的vue项目构建完成后的静态资源路径
+        #  remote: /usr/local/nginx/html/yuanshen # 这里是 step1 中，在服务器上创建用于存放静态资源的文件夹
